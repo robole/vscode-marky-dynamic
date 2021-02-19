@@ -221,14 +221,43 @@ describe("Document", function () {
 
     it("should add section numbers to headings", function () {
       let expected =
-        "# Document title,## 1. Section level 2 ##,### 1.1. Section level 3,## 2. Section level 2 again,### 2.1 Section level 3 again";
+        "# Document title,## 1. Section level 2 ##,### 1.1. Section level 3,## 2. Section level 2 again,### 2.1. Section level 3 again";
       assert.equal(doc.addSectionNumbering(lines, 2, 6).toString(), expected);
     });
 
     it("should add section numbers to headings for a particular range", function () {
       let expected =
-        "# 1. Document title,## 1.1. Section level 2 ##,### Section level 3,## 1.2. Section level 2 again";
+        "# 1. Document title,## 1.1. Section level 2 ##,### Section level 3,## 1.2. Section level 2 again,### Section level 3 again";
       assert.equal(doc.addSectionNumbering(lines, 1, 2).toString(), expected);
+    });
+  });
+
+  describe("addSectionNumbering()", function() {
+    let lines;
+
+    beforeEach(function () {
+      lines = [];
+      lines[0] = "# Document Title";
+      lines[1] = "## Section 1";
+      lines[2] = "### Section 1.1";
+      lines[3] = "#### Section 1.1.1";
+      lines[4] = "##### Section 1.1.1.1";
+      lines[5] = "###### Section 1.1.1.1.1";
+      lines[6] = "## Section 2";
+      lines[7] = "### Section 2.1";
+      lines[8] = "#### Section 2.1.1";
+      lines[9] = "##### Section 2.1.1.1";
+      lines[10] = "###### Section 2.1.1.1.1";
+    });
+
+    afterEach(function () {
+      lines = null;
+    });
+
+    it("should reset section numbers when going from low level sections to high level sections", function () {
+      let expected = 
+        "# Document Title,## 1. Section 1,### 1.1. Section 1.1, #### 1.1.1. Section 1.1.1,##### 1.1.1.1. Section 1.1.1.1,##### 1.1.1.1.1. Section 1.1.1.1.1,## 2. Section 2,### 2.1. Section 2.1, #### 2.1.1. Section 2.1.1,##### 2.1.1.1. Section 2.1.1.1,##### 2.1.1.1.1. Section 2.1.1.1.1,";
+      assert.equal(doc.addSectionNumbering(lines, 2, 6).toString(),expected);
     });
   });
 
