@@ -204,30 +204,45 @@ describe("Document", function () {
   });
 
   describe("addSectionNumbering()", function () {
-    let lines;
-
-    beforeEach(function () {
-      lines = [];
+    it("should add section numbers to headings", function () {
+      let lines = [];
       lines[0] = "# Document title";
       lines[1] = "## Section level 2 ##";
       lines[2] = "### Section level 3";
       lines[3] = "## Section level 2 again";
-    });
+      lines[4] = "### Section level 3 again";
 
-    afterEach(function () {
-      lines = null;
-    });
-
-    it("should add section numbers to headings", function () {
       let expected =
-        "# Document title,## 1. Section level 2 ##,### 1.1. Section level 3,## 2. Section level 2 again";
+        "# Document title,## 1. Section level 2 ##,### 1.1. Section level 3,## 2. Section level 2 again,### 2.1. Section level 3 again";
       assert.equal(doc.addSectionNumbering(lines, 2, 6).toString(), expected);
     });
 
     it("should add section numbers to headings for a particular range", function () {
+      let lines = [];
+      lines[0] = "# Document title";
+      lines[1] = "## Section level 2 ##";
+      lines[2] = "### Section level 3";
+      lines[3] = "## Section level 2 again";
+      lines[4] = "### Section level 3 again";
+
       let expected =
-        "# 1. Document title,## 1.1. Section level 2 ##,### Section level 3,## 1.2. Section level 2 again";
+        "# 1. Document title,## 1.1. Section level 2 ##,### Section level 3,## 1.2. Section level 2 again,### Section level 3 again";
       assert.equal(doc.addSectionNumbering(lines, 1, 2).toString(), expected);
+    });
+
+    it("should reset section numbers when going from low level sections to high level sections", function () {
+      let lines = [];
+      lines[0] = "# Document Title";
+      lines[1] = "## Section 1";
+      lines[2] = "### Section 1.1";
+      lines[3] = "#### Section 1.1.1";
+      lines[4] = "##### Section 1.1.1.1";
+      lines[5] = "###### Section 1.1.1.1.1";
+      lines[6] = "## Section 2";
+
+      let expected =
+        "# Document Title,## 1. Section 1,### 1.1. Section 1.1,#### 1.1.1. Section 1.1.1,##### 1.1.1.1. Section 1.1.1.1,###### 1.1.1.1.1. Section 1.1.1.1.1,## 2. Section 2";
+      assert.equal(doc.addSectionNumbering(lines, 2, 6).toString(), expected);
     });
   });
 

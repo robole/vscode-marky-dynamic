@@ -4,6 +4,8 @@
 ![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/robole.marky-dynamic?logo=visual-studio-code&color=ffa500)
 ![Extension file size in bytes](https://img.shields.io/static/v1?logo=visual-studio-code&label=size&message=20KB&color=008000)
 ![Visual Studio Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/robole.marky-dynamic?logo=visual-studio-code&color=yellow)
+![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/robole.marky-dynamic?logo=visual-studio-code&color=blue)
+![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/robole.marky-dynamic?logo=visual-studio-code&color=blue)
 ![Built with](https://img.shields.io/static/v1?label=built%20with&message=good%20vibrations%20%26%20javascript&color=violet)
 
 This extension exists to take care of irritating manual interventions you have to make for dynamic content. For example, a Table of Contents can break and go stale as you edit. Just set "update on save" and you will never have to worry about this again!
