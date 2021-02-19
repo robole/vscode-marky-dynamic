@@ -157,7 +157,7 @@ function addSectionNumbering(lines, fromLevel, toLevel) {
   const regex = heading.getGroupedRegex(fromLevel, toLevel);
   const updatedLines = [];
   const sectionCount = [0, 0, 0, 0, 0, 0];
-  const lastLevel = 0;
+  var lastLevel = sectionCount.length;
 
   lines.forEach(function (line) {
     const result = regex.exec(line);
@@ -167,7 +167,7 @@ function addSectionNumbering(lines, fromLevel, toLevel) {
     } else {
       const level = heading.getLevel(line);
       
-      while (level > lastLevel) {
+      while (level < lastLevel) {
         sectionCount[lastLevel-1] = 0;
         lastLevel -= 1;
       }
