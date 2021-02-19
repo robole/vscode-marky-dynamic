@@ -212,6 +212,7 @@ describe("Document", function () {
       lines[1] = "## Section level 2 ##";
       lines[2] = "### Section level 3";
       lines[3] = "## Section level 2 again";
+      lines[4] = "### Section level 3 again";
     });
 
     afterEach(function () {
@@ -220,7 +221,7 @@ describe("Document", function () {
 
     it("should add section numbers to headings", function () {
       let expected =
-        "# Document title,## 1. Section level 2 ##,### 1.1. Section level 3,## 2. Section level 2 again";
+        "# Document title,## 1. Section level 2 ##,### 1.1. Section level 3,## 2. Section level 2 again,### 2.1 Section level 3 again";
       assert.equal(doc.addSectionNumbering(lines, 2, 6).toString(), expected);
     });
 
