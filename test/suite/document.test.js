@@ -256,7 +256,7 @@ describe("Document", function () {
 
     it("should reset section numbers when going from low level sections to high level sections", function () {
       let expected = 
-        "# Document Title,## 1. Section 1,### 1.1. Section 1.1, #### 1.1.1. Section 1.1.1,##### 1.1.1.1. Section 1.1.1.1,##### 1.1.1.1.1. Section 1.1.1.1.1,## 2. Section 2,### 2.1. Section 2.1, #### 2.1.1. Section 2.1.1,##### 2.1.1.1. Section 2.1.1.1,##### 2.1.1.1.1. Section 2.1.1.1.1,";
+        "# Document Title,## 1. Section 1,### 1.1. Section 1.1,#### 1.1.1. Section 1.1.1,##### 1.1.1.1. Section 1.1.1.1,###### 1.1.1.1.1. Section 1.1.1.1.1,## 2. Section 2,### 2.1. Section 2.1,#### 2.1.1. Section 2.1.1,##### 2.1.1.1. Section 2.1.1.1,###### 2.1.1.1.1. Section 2.1.1.1.1";
       assert.equal(doc.addSectionNumbering(lines, 2, 6).toString(),expected);
     });
   });
