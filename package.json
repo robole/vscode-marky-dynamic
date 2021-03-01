@@ -5,9 +5,9 @@
   "author": {
     "name": "Rob O'Leary"
   },
-  "description": "Table of Contents. Bookmarks. Section Numbering. Auto-update them on save.",
+  "description": "Table of Contents, heading bookmarks, section numbering - auto-update them on save.",
   "icon": "img/logo.png",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "engines": {
     "vscode": "^1.46.0"
   },

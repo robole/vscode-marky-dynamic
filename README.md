@@ -7,13 +7,14 @@
 ![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/robole.marky-dynamic?logo=visual-studio-code&color=blue)
 ![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/robole.marky-dynamic?logo=visual-studio-code&color=blue)
 ![Built with](https://img.shields.io/static/v1?label=built%20with&message=good%20vibrations%20%26%20javascript&color=violet)
+[![Coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-$4-orange?logo=buy-me-a-coffee)](https://www.buymeacoffee.com/robole)
+
 
 This extension exists to take care of irritating manual interventions you have to make for dynamic content. For example, a Table of Contents can break and go stale as you edit. Just set "update on save" and you will never have to worry about this again!
 
 ![banner](/img/banner1280x640.png)
 
 Reasons to choose this extension over others:
-1. Awesome features. 🚀
 1. Small size with zero bloat: Many extensions include things that are unnecessary in the package and do not optimize the resources. Expect this extension to load faster. ⚡
 1. Loaded only when necessary: It is loaded only when you have markdown documents open. Some extensions are loaded for every project with a README, lurking in memory never to be used! 👻
 1. Tested well. This extension has a test suite, it is alarming how many extensions don't! ✔
