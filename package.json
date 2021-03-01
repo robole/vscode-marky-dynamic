@@ -7,7 +7,7 @@
   },
   "description": "Table of Contents. Bookmarks. Section Numbering. Auto-update them on save.",
   "icon": "img/logo.png",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "engines": {
     "vscode": "^1.46.0"
   },
