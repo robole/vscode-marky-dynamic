@@ -5,9 +5,9 @@
   "author": {
     "name": "Rob O'Leary"
   },
-  "description": "Table of Contents, heading bookmarks, section numbering - auto-update them on save.",
+  "description": "Markdown table of contents, section numbering - auto-update them on save.",
   "icon": "img/logo.png",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "engines": {
     "vscode": "^1.46.0"
   },
@@ -35,40 +35,46 @@
   },
   "license": "MIT",
   "activationEvents": [
-    "onLanguage:markdown",
-    "onCommand:marky-markdown.addBookmarks",
-    "onCommand:marky-markdown.removeBookmarks",
-    "onCommand:marky-markdown.addTableOfContents",
-    "onCommand:marky-markdown.removeTableOfContents",
-    "onCommand:marky-markdown.addSectionNumbering",
-    "onCommand:marky-markdown.removeSectionNumbering"
+    "onLanguage:markdown"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "marky-markdown.addBookmarks",
-        "title": "Marky Dynamic: Add/Update Heading Bookmarks"
+        "title": "Add/Update Heading Bookmarks",
+        "category": "Marky Dynamic",
+        "enablement": "editorLangId == markdown"
       },
       {
         "command": "marky-markdown.removeBookmarks",
-        "title": "Marky Dynamic: Remove Heading Bookmarks"
+        "title": "Remove Heading Bookmarks",
+        "category": "Marky Dynamic",
+        "enablement": "editorLangId == markdown"
       },
       {
         "command": "marky-markdown.addTableOfContents",
-        "title": "Marky Dynamic: Add/Update the Table of Contents (TOC)"
+        "title": "Add/Update the Table of Contents (TOC)",
+        "category": "Marky Dynamic",
+        "enablement": "editorLangId == markdown"
       },
       {
         "command": "marky-markdown.removeTableOfContents",
-        "title": "Marky Dynamic: Remove the Table of Contents (TOC)"
+        "title": "Remove the Table of Contents (TOC)",
+        "category": "Marky Dynamic",
+        "enablement": "editorLangId == markdown"
       },
       {
         "command": "marky-markdown.addSectionNumbering",
-        "title": "Marky Dynamic: Add/Update Section Numbering"
+        "title": "Add/Update Section Numbering",
+        "category": "Marky Dynamic",
+        "enablement": "editorLangId == markdown"
       },
       {
         "command": "marky-markdown.removeSectionNumbering",
-        "title": "Marky Dynamic: Remove Section Numbering"
+        "title": "Remove Section Numbering",
+        "category": "Marky Dynamic",
+        "enablement": "editorLangId == markdown"
       }
     ],
     "configuration": {

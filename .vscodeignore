@@ -10,4 +10,5 @@ src
 webpack.config.js
 img/**
 !img/logo.png
-readme.md
+todo.md
+.github

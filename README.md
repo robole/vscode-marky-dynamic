@@ -1,43 +1,32 @@
-# Marky Dynamic
+<h1 align="center">
+  <br>
+    <img align="center" src="img/banner.png">
+  <br>
+	<br>
+  Marky Dynamic
+  <br>
+  <br>
+</h1>
+<h4 align="center">Markdown table of contents, section numbering - auto-update them on save.</h4>
 
-![Extension file size in bytes](https://img.shields.io/static/v1?logo=visual-studio-code&label=made%20for&message=VS%20Code&color=0000ff)
-![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/robole.marky-dynamic?logo=visual-studio-code&color=ffa500)
-![Extension file size in bytes](https://img.shields.io/static/v1?logo=visual-studio-code&label=size&message=20KB&color=008000)
-![Visual Studio Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/robole.marky-dynamic?logo=visual-studio-code&color=yellow)
-![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/robole.marky-dynamic?logo=visual-studio-code&color=blue)
-![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/robole.marky-dynamic?logo=visual-studio-code&color=blue)
-![Built with](https://img.shields.io/static/v1?label=built%20with&message=good%20vibrations%20%26%20javascript&color=violet)
-[![Coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-$4-orange?logo=buy-me-a-coffee)](https://www.buymeacoffee.com/robole)
-
-
-This extension exists to take care of irritating manual interventions you have to make for dynamic content. For example, a Table of Contents can break and go stale as you edit. Just set "update on save" and you will never have to worry about this again!
-
-![banner](/img/banner1280x640.png)
-
-Reasons to choose this extension over others:
-1. Small size with zero bloat: Many extensions include things that are unnecessary in the package and do not optimize the resources. Expect this extension to load faster. ⚡
-1. Loaded only when necessary: It is loaded only when you have markdown documents open. Some extensions are loaded for every project with a README, lurking in memory never to be used! 👻
-1. Tested well. This extension has a test suite, it is alarming how many extensions don't! ✔
-1. I use this extension and actively maintain it. 🙋‍♂️
-
-<!-- TOC -->
-**Table of Contents**
-- [Commands](#commands)
-- [Features](#features)
-	- [(1) Manage a Table of Contents (TOC)](#1-manage-a-table-of-contents-toc)
-	- [(2) Manage Heading Bookmarks](#2-manage-heading-bookmarks)
-	- [(3) Manage Section Numbering](#3-manage-section-numbering)
-- [Extension Settings](#extension-settings)
-- [Installation](#installation)
-- [Features under consideration](#features-under-consideration)
-<!-- /TOC -->
+<p align="center">
+<img src="https://img.shields.io/static/v1?logo=visual-studio-code&label=made%20for&message=VS%20Code&color=0000ff" alt="Made for VSCode">
+<img src="https://img.shields.io/visual-studio-marketplace/v/robole.marky-dynamic?logo=visual-studio-code&color=ffa500" alt="Visual Studio Marketplace Version">
+<img src="https://img.shields.io/static/v1?logo=visual-studio-code&label=size&message=20KB&color=008000"
+alt="Extension file size in bytes">
+<img src="https://img.shields.io/visual-studio-marketplace/r/robole.marky-dynamic?logo=visual-studio-code&color=yellow" alt="Visual Studio Marketplace Rating">
+<img src="https://img.shields.io/visual-studio-marketplace/d/robole.marky-dynamic?logo=visual-studio-code&color=blue" alt="downloads"/>
+<img src="https://img.shields.io/visual-studio-marketplace/i/robole.marky-dynamic?logo=visual-studio-code&color=blue" alt="installs"/>
+<img src="https://img.shields.io/static/v1?label=built%20with&message=good%20vibrations%20%26%20javascript&color=violet" alt="Built with carrot juice and javascript"/>
+<a href="https://ko-fi.com/roboleary"><img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-$4-orange?logo=buy-me-a-coffee" alt="Buy me a coffee"></a>
+</p>
 
 ## Commands
 
 The following commands can be run from the Command Palette (`Ctrl+Shift+P`):
 
-1. `Marky Dynamic: Add/Update the Table of Contents (TOC)`
-1. `Marky Dynamic: Remove the Table of Contents (TOC)`
+1. `Marky Dynamic: Add/Update the Table of Contents (TOC)`: Add a Table of Contents (TOC) at the cursor position in the active markdown document. If the TOC exists already, it will be updated.
+1. `Marky Dynamic: Remove the Table of Contents (TOC)`: Remove the TOC from the document. You do not need to select the TOC for this to happen.
 1. `Marky Dynamic: Add/Update Heading Bookmarks`
 1. `Marky Dynamic: Remove Heading Bookmarks`
 1. `Marky Dynamic: Add/Update Section Numbering`
@@ -45,57 +34,58 @@ The following commands can be run from the Command Palette (`Ctrl+Shift+P`):
 
 ## Features
 
+Marky Dynamic supports open and closed ATX-style headings (the ones that use hashes).
+
 ### (1) Manage a Table of Contents (TOC)
 
-The command `Marky Dynamic: Add/Update the Table of Contents (TOC)` will add a table of contents (TOC) **at the cursor position in the active markdown document**. If the TOC exists already, it will be updated.
+The command `Marky Dynamic: Add/Update the Table of Contents (TOC)` will add a table of contents (TOC) at the cursor position in the active markdown document. If the TOC exists already, it will be updated.
 
 ![Add TOC](img/screenshots/add-toc.gif)
 
-It does the following:
-
-- Searches for open and closed ATX-style headings (the ones that use hashes).
-- **Includes headings levels 2 through 6 by default.** You can change this in the Settings through the `Marky Markdown › Bookmarks: Level Range` option.
-- It creates a link with the URL based on the setting `Marky Markdown › Slugify Style`. It excludes the text of bookmark links.
-- It creates an unordered list of the links. Indentation is based on your User Settings (`Editor: Insert Spaces`, `Editor: Tab Size`, and `Editor: Detect Indentation` )
-- It adds a CodeLens entry to the top of the TOC indicating if it is "up-to-date" with the document. You can click this entry to update the TOC.
+- The setting `Marky Markdown › Table of Contents: Level Range` determines which headings are included.
+- The setting `Marky Markdown › Slugify Style` determines how the ID for the links are generated. It excludes the text from bookmark links.
+- Indentation is based on your User Settings (`Editor: Insert Spaces`, `Editor: Tab Size`, and `Editor: Detect Indentation` )
+- The CodeLens entry on the top of the TOC indicates if it is "up-to-date" with the document. You can click this entry to update the TOC.
 
   	![Update TOC](img/screenshots/update-toc.gif)
 
-- You can choose to have the TOC update automatically whenever the document is saved by enabling the `Marky Markdown › Update On Save` option in the Settings. The performance is good, it will not be an issue if you have [Autosave](https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save) set to save "after a delay" of approximately 1 second, but you should be mindful of what other extensions are up to!
+- You can choose to have the TOC update automatically whenever the document is saved by enabling the `Marky Markdown › Update On Save` option in the Settings.
 - You can choose to add a label to the top of the TOC by editing the `Marky Markdown › Table Of Contents: Label` option in the Settings.
 
-The command `Marky Dynamic: Remove the Table of Contents (TOC)` will remove the TOC.
+The command `Marky Dynamic: Remove the Table of Contents (TOC)` will remove the TOC. You do not need to select the TOC for this to happen.
 
 ### (2) Manage Heading Bookmarks
 
-It is helpful to readers to have a link in headings for bookmarking different sections of a document. You probably have seen this done automatically by GitHub to `readme.md` files, like in the image below.
+It is helpful to readers to have a link in headings for bookmarking different sections of a document for navigation and sharing. You probably have seen this done automatically by GitHub to `readme.md` files, like in the image below.
 
 <img src="img/screenshots/heading-link.jpg" style="border:1px black solid;" alt="heading link" /><br>
 
-The command `Marky Dynamic: Add/Update Heading Bookmarks` will add bookmark links to the headings in the **active markdown document**.
+The command `Marky Dynamic: Add/Update Heading Bookmarks` will add bookmark links to the headings in the active markdown document.
 
 ![add bookmark link to headings](img/screenshots/add-heading-link.gif)
 
 It does the following:
 
-- Searches for open and closed ATX-style headings (the ones that use hashes).
-- **Includes headings levels 2 through 6 by default.** You can change this in the Settings through the `Marky Markdown › Table of Contents: Level Range` option.
+- The `Marky Markdown › Table of Contents: Level Range` determines which headings are included.
 - By default, it will add a link with the text '**∞**', this is the infinity character, which looks like a link! In the Settings, you can customise this text (`Marky Markdown › Bookmarks: Link Text`), or specify an image (`Marky Markdown › Bookmarks: Link Image Path`). If you provide text and an image, the image will come first.
-- The URL generated is based on the setting `Marky Markdown › Slugify Style`. It excludes the text from bookmark links.
+- The setting `Marky Markdown › Slugify Style` determines how the ID for the links are generated. It excludes the text from bookmark links.
 - You can choose to have the bookmarks update automatically whenever the document is saved by enabling the `Marky Markdown › Update On Save` option in the Settings.
 
-The command `Marky Dynamic: Remove Heading Bookmarks` will remove the bookmark links.
+The command `Marky Dynamic: Remove Heading Bookmarks` will remove the bookmark links from all headings.
 
 ### (3) Manage Section Numbering
 
-The command `Marky Dynamic: Add/Update Section Numbering` will add section numbers to the headings in the **active markdown document**.
+The command `Marky Dynamic: Add/Update Section Numbering` will add section numbers to the headings of the active markdown document.
 
 It does the following:
 
-- Searches for open and closed ATX-style headings (the ones that use hashes).
-- **Includes headings levels 2 through 6 by default.** You can change this in the Settings through the `Marky Markdown › Section Numbering: Level Range` option.
+- The `Marky Markdown › Section Numbering: Level Range` determines which headings are included.
 
-The command `Marky Dynamic: Remove Section Numbering` will remove the section numbers.
+The command `Marky Dynamic: Remove Section Numbering` will remove the section numbers from all headings.
+
+## Activation
+
+The extension is only loaded when a markdown file is open. To be more specific, the [activation event](https://code.visualstudio.com/api/references/activation-events) is `onLanguage: markdown`.
 
 ## Extension Settings
 
@@ -111,16 +101,20 @@ These settings can be applied to the User and the Workspace. The Workspace value
 | Marky Markdown › Table Of Contents: Label       | String  |                      | ""      | Add a label to the top of the Table of Contents.                                                                                                                                                        |
 | Marky Markdown › Table of Contents: Level Range | String  |                      | "2..6"  | Select the range of heading levels (from most important to least important) to which are included in the Table of Contents. For example, the range of '2..6' includes headings from level 2 to level 6. |
 | Marky Markdown › Table of Contents: List Type                 | String  | "unordered list", "ordered list" | "unordered list"  | The type of list for arranging the Table of Contents                               |
-| Marky Markdown › Update On Save                 | Boolean |                      | false   | Update the Bookmarks, Table of Contents, and Section Numbers automatically when the document is saved.                                                                                                                    |
+| Marky Markdown › Update On Save                 | Boolean |                      | false   | Update the Bookmarks, Table of Contents, and Section Numbers automatically when the document is saved.                                                                  |
 
 ## Installation
 
+1. It is listed in the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=robole.marky-dynamic) and [Open VSX Marketplace](https://open-vsx.org/extension/robole/marky-dynamic) where you can download or install it directly.
 1. Inside VS Code: Type `Ctrl+P`, write `ext install robole.marky-dynamic` in the text field, and hit `Enter`.
 1. From the Command-line: Run the command `code --install-extension robole.marky-dynamic`.
-1. From the [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=robole.marky-dynamic): Click the _Install_ button.
 
-## Features under consideration
+## Contribute
 
-1. Exclude headings from TOC.
-1. File specific settings for TOC/Bookmarks/Section Numbering?
-1. Support for other languages.
+If you have a suggestion or find a bug, please file an issue.
+
+## Show gratitude
+
+If you are happy with the extension, please star the repo, and leave a review to help others find it. 🌟
+
+You can [buy me a coffee](https://ko-fi.com/roboleary) if you would like to support me to make more great open-source software. ☕🙏
