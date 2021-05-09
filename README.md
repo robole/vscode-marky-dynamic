@@ -7,7 +7,7 @@
   <br>
   <br>
 </h1>
-<h4 align="center">Markdown table of contents, section numbering - auto-update them on save.</h4>
+<h4 align="center">Automate updating dynamic content e.g. Table of Contents.</h4>
 
 <p align="center">
 <img src="https://img.shields.io/static/v1?logo=visual-studio-code&label=made%20for&message=VS%20Code&color=0000ff" alt="Made for VSCode">
