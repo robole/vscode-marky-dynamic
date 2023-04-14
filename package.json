@@ -5,9 +5,9 @@
   "author": {
     "name": "Rob O'Leary"
   },
-  "description": "Automate updating dynamic content e.g. Table of Contents.",
+  "description": "Automate updating dynamic content in a markdown document e.g. Table of Contents.",
   "icon": "img/logo.png",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "engines": {
     "vscode": "^1.46.0"
   },
