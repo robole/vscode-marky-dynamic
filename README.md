@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-    <img align="center" src="img/banner.png">
+    <img align="center" src="img/logo.png" alt="Marky Dynamic logo" style="width:200px;">
   <br>
 	<br>
   Marky Dynamic
