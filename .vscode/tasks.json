@@ -10,19 +10,9 @@
       "detail": "vsce package ."
     },
     {
-      "type": "npm",
-      "script": "webpack",
-      "problemMatcher": [],
-      "label": "npm: webpack",
-      "detail": "webpack --mode development --watch"
-    },
-    {
-      "label": "Run npm webpack on startup",
+      "label": "Run webpack on startup",
       "type": "shell",
-      "command": "npm run webpack",
-      "windows": {
-        "command": "npm run webpack"
-      },
+      "command": "npm run dev",
       "presentation": {
         "reveal": "always",
         "panel": "new"

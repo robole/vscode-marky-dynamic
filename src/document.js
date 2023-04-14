@@ -302,45 +302,6 @@ function getGroupedHeadings(text, fromLevel, toLevel = 6) {
   return [...matches];
 }
 
-/**
- * Get the number of words.
- *
- * @param {string} text Text for document.
- */
-function getWordCount(text) {
-  let matches = text.match(/\w+/g);
-
-  if (matches === null) {
-    return 0;
-  }
-
-  return matches.length;
-}
-
-/**
- * Get the reading time in minutes. It is based on a reading speed of 250 words per minute.
- *
- *  @param {string} text Text for document.
- */
-function getReadingTime(text) {
-  const words = getWordCount(text);
-
-  if (words === 0) {
-    return 0;
-  }
-
-  return Math.ceil(words / 250);
-}
-
-/**
- * Get the number of characters including new line characters.
- *
- * @param {string} text Text for document.
- */
-function getCharacterCount(text) {
-  return text.match(/[.\r\n]*/gm).length;
-}
-
 module.exports = {
   addBookmarks,
   removeBookmarks,
@@ -350,7 +311,4 @@ module.exports = {
   hasSectionNumbering,
   getHeadings,
   getGroupedHeadings,
-  getWordCount,
-  getCharacterCount,
-  getReadingTime,
 };

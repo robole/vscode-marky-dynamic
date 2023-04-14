@@ -7,7 +7,7 @@
   <br>
   <br>
 </h1>
-<h4 align="center">Automate updating dynamic content e.g. Table of Contents.</h4>
+<h4 align="center">Automate updating dynamic content such as Table of Contents.</h4>
 
 <p align="center">
 <img src="https://img.shields.io/static/v1?logo=visual-studio-code&label=made%20for&message=VS%20Code&color=0000ff" alt="Made for VSCode">
@@ -87,9 +87,7 @@ The command `Marky Dynamic: Remove Section Numbering` will remove the section nu
 
 The extension is only loaded when a markdown file is open. To be more specific, the [activation event](https://code.visualstudio.com/api/references/activation-events) is `onLanguage: markdown`.
 
-## Extension Settings
-
-These settings can be applied to the User and the Workspace. The Workspace values take precedence over the User values.
+## Settings
 
 | Name                                            | Type    | Enum Values          | Default | Description                                                                                                                                                                                             |
 | ----------------------------------------------- | ------- | -------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -103,18 +101,19 @@ These settings can be applied to the User and the Workspace. The Workspace value
 | Marky Markdown › Table of Contents: List Type                 | String  | "unordered list", "ordered list" | "unordered list"  | The type of list for arranging the Table of Contents                               |
 | Marky Markdown › Update On Save                 | Boolean |                      | false   | Update the Bookmarks, Table of Contents, and Section Numbers automatically when the document is saved.                                                                  |
 
-## Installation
-
-1. It is listed in the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=robole.marky-dynamic) and [Open VSX Marketplace](https://open-vsx.org/extension/robole/marky-dynamic) where you can download or install it directly.
-1. Inside VS Code: Type `Ctrl+P`, write `ext install robole.marky-dynamic` in the text field, and hit `Enter`.
-1. From the Command-line: Run the command `code --install-extension robole.marky-dynamic`.
-
 ## Contribute
 
 If you have a suggestion or find a bug, please file an issue.
 
-## Show gratitude
+## Appreciate
 
-If you are happy with the extension, please star the repo, and leave a review to help others find it. 🌟
+You can show your appreciation by:
+1. [Buying me a coffee or sponsoring me](https://ko-fi.com/roboleary)
+1. Leaving a positive review in the [visual studio marketplace](<https://marketplace.visualstudio.com/items?itemName=robole.marky-stats&ssr=false#review-details>).
+1. Starring the repo 🌟.
 
-You can [buy me a coffee](https://ko-fi.com/roboleary) if you would like to support me to make more great open-source software. ☕🙏
+This will **help other people find the extension**.
+
+It will **offer me encouragement** to continue, and can provide **a path to dedicating more time to open-source** in the future.
+
+Thank you! 🙏

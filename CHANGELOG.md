@@ -5,6 +5,24 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2023-04-13
+
+### Changed
+
+- Refactoring:
+	- Renamed *active-document.js* to *activeDocument.js*.
+	- Improved readability of *extension.js* to separate disposables.
+- Upgraded webpack and webpack CLI to work with latest Node.
+- Shortened *.vscodeignore*.
+
+### Added
+
+- Added sponsor in *package.json* and *funding.yml*.
+
+### Removed
+
+- Removed unused functions such as `getWordCount()`, `getCharacterCount()`, and `getLineCount()` from *active-document.js* and *document.js*.
+
 ## [0.3.0] - 2021-05-09
 
 ## Changed

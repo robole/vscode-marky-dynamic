@@ -151,7 +151,7 @@ function isUpToDate(editor) {
 
 /**
  * Get the text of the Table of Contents from the document of the TextEditor provided. It will return an
- * empty string if it does * not exist.
+ * empty string if it does not exist.
  * @param {import("vscode").TextEditor} editor
  * @returns {string} Table of contents
  */
@@ -165,7 +165,7 @@ function getText(editor) {
 
 /**
  * Get the Code Lens for the Table of Contents from the document of the TextEditor provided. The Code Lens displays
- * the status of the TOC (up to date/out of date) and allows the user to run a command to update the TOC by clicking it.
+ * the status of the TOC ("up to date" or "out of date") and allows the user to run a command to update the TOC by clicking it.
  * @param {import("vscode").TextEditor} editor
  * @returns {vscode.CodeLens} The Code Lens.
  */
